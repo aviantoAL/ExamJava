@@ -4,19 +4,26 @@ import java.util.Scanner;
 public class ArrayMenuDua {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+		
+		
+		// mendeklarasikan variabel array
         int[] array1d = null;
         int[][] array2d = null;
-
+		
+		// while dimana pada kondisinya bernilai true
         while (true) {
             System.out.println("MENU");
             System.out.println("I. Array 1 Dimensi");
             System.out.println("II. Array 2 Dimensi");
             System.out.println("III. EXIT");
-
+			
+			
+			// melakukan input Menu
             System.out.print("Masukkan Input: ");
             String menuInput = scanner.next();
-
+			
+			
+			// pemilihan kondisi menggunakan switch case pada menu I
             switch (menuInput) {
                 case "I":
                     System.out.println("a. Input Array 1 Dimensi");
@@ -53,7 +60,8 @@ public class ArrayMenuDua {
                             System.out.println("Input tidak valid. Silakan coba lagi.");
                     }
                     break;
-
+				
+				// kondisi apabila memilih 	II
                 case "II":
                     System.out.println("a. Input Array 2 Dimensi");
                     System.out.println("b. Sort Array 2 Dimensi");
@@ -103,7 +111,9 @@ public class ArrayMenuDua {
 			System.out.println("======================================");
         }
     }
-
+	
+	
+	// method input array 1 dimensi
     private static int[] inputArray1D(int length) {
         int[] array = new int[length];
         Scanner scanner = new Scanner(System.in);
@@ -115,7 +125,9 @@ public class ArrayMenuDua {
 
         return array;
     }
-
+	
+	
+	// methode sort pada array 1 dimensi
     private static void sortArray1D(int[] array) {
         Arrays.sort(array);
 		System.out.println("=================================");
@@ -128,7 +140,9 @@ public class ArrayMenuDua {
         }
         System.out.println();
     }
-
+	
+	
+	// method search pada array 1 dimensi
     private static void searchArray1D(int[] array) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Masukkan nilai yang ingin dicari: ");
@@ -148,7 +162,9 @@ public class ArrayMenuDua {
             System.out.println("Nilai " + target + " tidak ditemukan dalam array.");
         }
     }
-
+		
+		
+	// method input array 2 dimensi	
     private static int[][] inputArray2D(int rows, int cols) {
         int[][] array = new int[rows][cols];
         Scanner scanner = new Scanner(System.in);
@@ -162,7 +178,10 @@ public class ArrayMenuDua {
 
         return array;
     }
-
+	
+	
+	
+	// method sort pada array 2 dimensi
     private static void sortArray2D(int[][] array) {
         for (int i = 0; i < array.length; i++) {
             Arrays.sort(array[i]);
@@ -177,7 +196,8 @@ public class ArrayMenuDua {
             System.out.println();
         }
     }
-
+	
+	// method search pada array 2 dimensi
     private static void searchArray2D(int[][] array) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Masukkan nilai yang ingin dicari: ");
